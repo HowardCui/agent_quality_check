@@ -1,0 +1,16 @@
+{
+  "upload_url": "http://localhost/v1/files/upload",
+  "workflow_url": "http://localhost/v1/workflows/run",
+  "upload_file_type":"Audio",
+  "dialog": "{\n  \"muti_dialog\": [\n    {\n      \"dialog_id\": \"DIALOG001\",\n      \"staff_id\":\"XX\",\n      \"dialog\": [\n        {\n          \"role\": \"客户\",\n          \"time\": \"09:45:00\",\n          \"content\": \"我昨天申请退款，进度怎么样了？\"\n        },\n        {\n          \"role\": \"客服\",\n          \"time\": \"09:45:25\",\n          \"content\": \"您好，我帮您看一下申请记录，请稍等。\"\n        },\n        {\n          \"role\": \"客服\",\n          \"time\": \"09:46:10\",\n          \"content\": \"系统显示已通过审核，预计1-3个工作日到账。\"\n        }\n      ]\n    },\n    {\n      \"dialog_id\": \"DIALOG002\",\n      \"staff_id\":\"XX\",\n      \"dialog\": [\n        {\n          \"role\": \"客户\",\n          \"time\": \"11:00:00\",\n          \"content\": \"怎么修改绑定的手机号？\"\n        },\n        {\n          \"role\": \"客服\",\n          \"time\": \"11:00:20\",\n          \"content\": \"您好，请登录账户后前往“账户设置”中的“安全中心”进行修改。\"\n        }\n      ]\n    }\n  ]\n}",
+  "audio_path": "C:/Users/17736/OneDrive/桌面/test.mp3",
+  "save_file_name": "abd",
+  "user": "user1",
+  "email_info": {
+    "sender_email": "cuihw@wotransfer.com",
+    "sender_password": "Chw903229"
+  },
+  "receiver": "yuanqf@pandaremit.com",
+  "dialog_id": "DIALOG00001",
+  "staff_id": "121313131"
+}
