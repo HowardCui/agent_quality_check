@@ -10,7 +10,7 @@
 
 | 方法名 | 功能说明 |
 |--------|----------|
-| `upload_text_file()` | 上传本地对话文本（`dialog` 字段）为 `.txt` 文件 |
+| `upload_text_file()` | 上传json对话文本（`dialog` 字段）为 `.txt` 文件 |
 | `upload_audio_file()` | 上传本地音频文件用于质检分析 |
 | `run_workflow_muti_dialog()` | 运行多轮对话的工作流 |
 | `run_workflow_audio()` | 运行本地音频的工作流 |
