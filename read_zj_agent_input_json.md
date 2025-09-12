@@ -10,7 +10,7 @@
   "workflow_url": "http://localhost/v1/workflows/run",
   "upload_file_type": "Audio",
   "dialog": "...",  // 字符串形式的 JSON
-  "audio_path": "C:/Users/xxx/Desktop/test.mp3",
+  "audio_path": "***",
   "save_file_name": "abd",
   "user": "user1",
   "email_info": {
@@ -65,3 +65,4 @@
 #### `"dialog"`跟`"audio_path"`是二选一 
 
 #### `"audio_path"`支持url输入 例如 `"https://example.com/audio.mp3"`
+
