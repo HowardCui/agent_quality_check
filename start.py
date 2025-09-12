@@ -23,6 +23,8 @@ if __name__=="__main__":
         upload_file_type=config.get("upload_file_type"),
         audio_path=config.get('audio_path'),
         dialog_id=config.get('dialog_id'),
-        staff_id=config.get('staff_id')
+        staff_id=config.get('staff_id')，
+        authorization=config.get('authorization')
     )
     checker.run()
+
