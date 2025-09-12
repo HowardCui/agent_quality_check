@@ -27,6 +27,7 @@ class Agent_quality_check:
                  receiver,
                  upload_file_type,
                  dialog,
+                 authorization,
                  audio_path = None,
                  dialog_id = None,
                  staff_id = None,
@@ -46,13 +47,14 @@ class Agent_quality_check:
         self.dialog=dialog
         self.dialog_id=dialog_id
         self.staff_id=staff_id
+        self.authorization=authorization
 
     def is_url(self):
         return re.match(r'^https?://', self.audio_path) is not None
 
     def upload_text_file(self):
         headers={
-            "Authorization": "Bearer app-6221pqu52m9HmgqILRyJsO6y",
+            "Authorization": self.authorization,
         }
         try:
             json_str=json.dumps(self.dialog, indent=2, ensure_ascii=False)
@@ -80,7 +82,7 @@ class Agent_quality_check:
 
     def upload_audio_file(self):
         headers={
-            "Authorization": "Bearer app-6221pqu52m9HmgqILRyJsO6y",
+            "Authorization": self.authorization,
         }
         try:
             # 📁 上传本地音频文件
@@ -114,7 +116,7 @@ class Agent_quality_check:
     def run_workflow_muti_dialog(self):
         response_mode="blocking"
         headers={
-            "Authorization": "Bearer app-6221pqu52m9HmgqILRyJsO6y",
+            "Authorization": self.authorization,
             "Content-Type": "application/json"
         }
         data={
@@ -152,7 +154,7 @@ class Agent_quality_check:
     def run_workflow_audio(self):
         response_mode="blocking"
         headers={
-            "Authorization": "Bearer app-6221pqu52m9HmgqILRyJsO6y",
+            "Authorization": self.authorization,
             "Content-Type": "application/json"
         }
         data= {
@@ -192,7 +194,7 @@ class Agent_quality_check:
     def run_workflow_audio_url(self):
         response_mode="blocking"
         headers={
-            "Authorization": "Bearer app-6221pqu52m9HmgqILRyJsO6y",
+            "Authorization": self.authorization,
             "Content-Type": "application/json"
         }
         data= {
@@ -300,12 +302,5 @@ class Agent_quality_check:
             self.send_email(excel_stream)
 
 if __name__=="__main__":
-    email_info={
-        "sender_email": 'cuihw@wotransfer.com',
-        "sender_password": "Chw903229",
-    }
+    break()
 
-    bot=Agent_quality_check(
-        email_info=email_info,
-    )
-    bot.run()
