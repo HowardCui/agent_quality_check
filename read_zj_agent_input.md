@@ -11,7 +11,6 @@
 | dialog_id    | string | 对话ID                  |   ❌ 否    |
 | staff_id     | string | 客服ID                  |   ❌ 否    |
 | audio_input  |        | 语音文件                  |      ❌ 否      |
-| authorization |        | API 授权码                |      ✅ 是      |
 
 ---
 ## 对话结构
@@ -153,3 +152,4 @@
 }
 
 ```
+
