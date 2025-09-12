@@ -19,7 +19,8 @@
   },
   "receiver": "",
   "dialog_id": "DIALOG00001",
-  "staff_id": "121313131"
+  "staff_id": "121313131",
+  "authorization":"",
 }
 ```
 ### 🧾 字段说明
@@ -39,6 +40,7 @@
 | `receiver`           | string       | 收件人邮箱。用于发送质检结果 Excel 附件。                                 | ❌ 否  |
 | `dialog_id`          | string       | 对话的编号。与 `muti_dialog` 冲突时优先使用 `muti_dialog`。             | ❌ 否  |
 | `staff_id`           | string       | 对话中的客服编号。                                                | ❌ 否  |
+| `authorization`           | string       |                                                 | ✅ 是   |
 
 ### 💡 备注
 #### dialog 字段为字符串形式的 JSON
@@ -61,4 +63,5 @@
 }
 ```
 #### `"dialog"`跟`"audio_path"`是二选一 
+
 #### `"audio_path"`支持url输入 例如 `"https://example.com/audio.mp3"`
