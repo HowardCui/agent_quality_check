@@ -13,5 +13,6 @@
   "receiver": "yuanqf@pandaremit.com",
   "dialog_id": "DIALOG00001",
   "staff_id": "121313131",
-  "Authorization": "Bearer app-6221pqu52m9HmgqILRyJsO6y",
+  "authorization": "Bearer app-6221pqu52m9HmgqILRyJsO6y",
 }
+
