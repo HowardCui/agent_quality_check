@@ -85,7 +85,7 @@ class Agent_quality_check:
             "Authorization": self.authorization,
         }
         try:
-            # 📁 上传本地音频文件
+            # 上传本地音频文件
             print("正在读取本地音频文件...")
             filename=os.path.basename(self.audio_path)
             mime_type, _=mimetypes.guess_type(filename)
@@ -281,9 +281,9 @@ class Agent_quality_check:
                 server.starttls()
                 server.login(self.email_info['sender_email'], self.email_info['sender_password'])
                 server.sendmail(self.email_info['sender_email'], self.receiver, message.as_string())
-            print("✅ 邮件发送成功！")
+            print("邮件发送成功！")
         except Exception as e:
-            print(f"❌ 邮件发送失败: {e}")
+            print(f"邮件发送失败: {e}")
 
     def run(self):
         if self.upload_file_type=='TXT':
@@ -303,4 +303,5 @@ class Agent_quality_check:
 
 if __name__=="__main__":
     break()
+
 
