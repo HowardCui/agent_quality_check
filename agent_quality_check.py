@@ -302,6 +302,14 @@ class Agent_quality_check:
             self.send_email(excel_stream)
 
 if __name__=="__main__":
-    pass()
+    email_info={
+        "sender_email": 'cuihw@wotransfer.com',
+        "sender_password": "******",
+    }
+
+    bot=Agent_quality_check(
+        email_info=email_info,
+    )
+    bot.run()
 
 
