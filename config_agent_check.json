@@ -1,7 +1,0 @@
-{
-  "upload_url": "http://localhost/v1/files/upload",
-  "workflow_url": "http://localhost/v1/workflows/run",
-  "authorization": "Bearer app-6221pqu52m9HmgqILRyJsO6y"
-}
-
-
