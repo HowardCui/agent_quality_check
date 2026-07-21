@@ -12,18 +12,19 @@ def load_config(path="config_agent_check.json"):
 
 if __name__=="__main__":
     config=load_config()
+    test_sample=load_config("test_sample.json")
     checker=Agent_quality_check(
         upload_url=config.get("upload_url"),
         workflow_url=config.get("workflow_url"),
-        dialog=config.get("dialog"),
-        save_file_name=config.get("save_file_name"),
-        user=config.get("user"),
-        email_info=config.get("email_info"),
-        receiver=config.get("receiver"),
-        upload_file_type=config.get("upload_file_type"),
-        audio_path=config.get('audio_path'),
-        dialog_id=config.get('dialog_id'),
-        staff_id=config.get('staff_id'),
+        dialog=test_sample.get("dialog"),
+        save_file_name=test_sample.get("save_file_name"),
+        user=test_sample.get("user"),
+        email_info=test_sample.get("email_info"),
+        receiver=test_sample.get("receiver"),
+        upload_file_type=test_sample.get("upload_file_type"),
+        audio_path=test_sample.get('audio_path'),
+        dialog_id=test_sample.get('dialog_id'),
+        staff_id=test_sample.get('staff_id'),
         authorization=config.get('authorization')
     )
     checker.run()

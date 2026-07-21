@@ -1,0 +1,1350 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: 质检v3
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.0.34@611538dd92e8b164bd88aa4027cceeda28aeaf6ff19ea82a5925c20f9f358651
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: qiangxinglin/excel_tools:0.0.1@e6019557a12b0d8436ed924532d043c691504a872e18120a12d79e1b2225628e
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1753671059911-true-1753667739521-target
+      selected: false
+      source: '1753671059911'
+      sourceHandle: 'true'
+      target: '1753667739521'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: document-extractor
+      id: 1753671059911-93d9a111-5244-452f-8d13-1dc5f9df7801-1753671613237-target
+      selected: false
+      source: '1753671059911'
+      sourceHandle: 93d9a111-5244-452f-8d13-1dc5f9df7801
+      target: '1753671613237'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: llm
+      id: 1753671613237-source-17536713257860-target
+      selected: false
+      source: '1753671613237'
+      sourceHandle: source
+      target: '17536713257860'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: code
+      id: 1753671059911-false-1753672821096-target
+      selected: false
+      source: '1753671059911'
+      sourceHandle: 'false'
+      target: '1753672821096'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: code
+      id: 1753671059911-5b354f9e-e365-408e-8cbc-236032889606-17536729420910-target
+      selected: false
+      source: '1753671059911'
+      sourceHandle: 5b354f9e-e365-408e-8cbc-236032889606
+      target: '17536729420910'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: end
+      id: 17536729420910-source-1753751309447-target
+      selected: false
+      source: '17536729420910'
+      sourceHandle: source
+      target: '1753751309447'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: end
+      id: 1753672821096-source-1753751337547-target
+      selected: false
+      source: '1753672821096'
+      sourceHandle: source
+      target: '1753751337547'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1753667739521-source-1753865449688-target
+      selected: false
+      source: '1753667739521'
+      sourceHandle: source
+      target: '1753865449688'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1753866047962-source-1753668973280-target
+      selected: false
+      source: '1753866047962'
+      sourceHandle: source
+      target: '1753668973280'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1753863016281-source-1753671782560-target
+      selected: false
+      source: '1753863016281'
+      sourceHandle: source
+      target: '1753671782560'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 17536713257860-source-17538683315150-target
+      selected: false
+      source: '17536713257860'
+      sourceHandle: source
+      target: '17538683315150'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 17538683315150-source-1754363868447-target
+      selected: false
+      source: '17538683315150'
+      sourceHandle: source
+      target: '1754363868447'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: tool
+      id: 1754363868447-true-1753863016281-target
+      selected: false
+      source: '1754363868447'
+      sourceHandle: 'true'
+      target: '1753863016281'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: end
+      id: 1754363868447-false-1754364010702-target
+      selected: false
+      source: '1754363868447'
+      sourceHandle: 'false'
+      target: '1754364010702'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: tool
+      id: 1753865449688-source-1753866047962-target
+      selected: false
+      source: '1753865449688'
+      sourceHandle: source
+      target: '1753866047962'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: if-else
+      id: 1753664561933-source-1754379920020-target
+      selected: false
+      source: '1753664561933'
+      sourceHandle: source
+      target: '1754379920020'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: if-else
+      id: 1754379920020-true-1753671059911-target
+      selected: false
+      source: '1754379920020'
+      sourceHandle: 'true'
+      target: '1753671059911'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: tool
+      id: 1754379920020-false-1754379634688-target
+      selected: false
+      source: '1754379920020'
+      sourceHandle: 'false'
+      target: '1754379634688'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: llm
+      id: 1754379634688-source-17543802375720-target
+      selected: false
+      source: '1754379634688'
+      sourceHandle: source
+      target: '17543802375720'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 17543802375720-source-17543878613160-target
+      source: '17543802375720'
+      sourceHandle: source
+      target: '17543878613160'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: end
+      id: 17543878613160-source-1754380316477-target
+      source: '17543878613160'
+      sourceHandle: source
+      target: '1754380316477'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - hide: false
+          label: 一组对话
+          max_length: null
+          options: []
+          required: false
+          type: paragraph
+          variable: dialog
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          label: 多组对话
+          max_length: 48
+          options: []
+          required: false
+          type: file
+          variable: muti_dialog
+        - label: 导出文件名
+          max_length: 48
+          options: []
+          required: true
+          type: text-input
+          variable: name_file
+        - hide: true
+          label: '输出类型   默认：EXCEL '
+          max_length: 48
+          options: []
+          required: false
+          type: text-input
+          variable: output_type
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - audio
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          hide: true
+          label: 音频输入
+          max_length: 48
+          options: []
+          required: false
+          type: file
+          variable: audio_input
+        - hide: false
+          label: 对话ID
+          max_length: 48
+          options: []
+          required: false
+          type: text-input
+          variable: dialog_id
+        - label: 客服ID
+          max_length: 48
+          options: []
+          required: false
+          type: text-input
+          variable: staff_id
+      height: 245
+      id: '1753664561933'
+      position:
+        x: -829.9503840911857
+        y: 272.5910592442603
+      positionAbsolute:
+        x: -829.9503840911857
+        y: 272.5910592442603
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        default_value:
+        - key: text
+          type: string
+          value: ''
+        desc: ''
+        error_strategy: default-value
+        model:
+          completion_params: {}
+          mode: chat
+          name: qwen-max
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: d23447c3-9321-4316-8ff1-fe3ecb6a9ab7
+          role: system
+          text: "你是一个客服对话质检AI，任务是根据以下详细质检标准对客服与客户的对话记录进行逐项评估，判断客服是否符合要求。请严格对照以下所有质检规则完成评估：\n\
+             \n## 响应时间 - 回应客户时间\n- 标准：帮客户查询相关信息后，再次回应客户时间不得超过2分钟\n- 严重程度：非致命项\n \n\
+            ## 响应时间 - 首次响应时间\n- 标准：首次响应时间不得超过40秒\n- 严重程度：非致命项\n \n## 服务态度 - 0容忍\n\
+            - 包括但不限于以下行为，均属服务态度致命项：\n  - 辱骂、推诿、质问、争执客户；\n  - 非礼貌或恶意主动关闭会话；\n  - 隐瞒投诉；\n\
+              - 引导客户升级投诉；\n  - 告知“没有领导”；\n  - 承诺操作未履行；\n  - 催促客户断线。\n \n## 服务技巧\n\
+            - 在线梳理：多次进线未主动查历史记录/工单，致命项；\n- 引导控制：不理解客户问题时未引导，致命项；\n- 确认信息：用户信息无误却锁定错误账户/订单，致命项；\n\
+            - 表达能力：表达混乱或对用户负面情绪未安抚，致命项。\n \n## 标准用语\n- 开头语：应使用“您好，请问有什么可以帮您？”（非致命项）；\n\
+            - 礼貌用语：\n  - 使用敬语如“您”“请”，不能使用口语化字词（非致命项）；\n  - 用户致谢应回应，如“不客气”等；\n  - 如答复错误需致歉；\n\
+              - 不得否定客户表达（非致命项）。\n \n## 流程执行与解决方案\n- 在线结束准确：\n  - 未做到“到我为止”、用户未结束主动关闭、已处理完未关闭，均为致命项；\n\
+            - 流程执行准确：\n  - 未按流程、错误方案，均为致命项。\n \n## 错别字\n- 同一会话中出现3次以上错别字，为非致命项。\n\
+             \n## 加分项\n- 用户对解决方案不认可时主动进一步协助；\n- 提供解决方案时解释原因；\n- 主动给出超出流程预期的帮助或提示。\n\
+             \n请根据以上每条标准评估对话记录，逐项输出评分细节，列出加分项与致命项，并最终判断是否通过本次质检。并只返回如下结构的合法JSON结果\n\
+             \n{\n\"dialog_id\": {{#1753664561933.dialog_id#}},\n\"staff_id\":{{#1753664561933.staff_id#}}, \
+            \ \n\"passed\": \"PASS / FAIL\",\n  \"fatal_issues\": [\"Issue 1\", \"\
+            Issue 2\"],\n  \"non_fatal_issues\": [\"Issue 1\", \"Issue 2\", \"Issue\
+            \ 3\"],\n  \"bonus_points\": [\"Bonus 1\", \"Bonus 2\"],\n  \"score_details\"\
+            : {\n    \"response_time_first\": \"Pass / Fail (explanation)\",\n   \
+            \ \"response_time_followup\": \"Pass / Fail (explanation)\",\n    \"attitude\"\
+            : \"Pass / Fatal issue: ...\",\n    \"service_techniques\": \"Pass / Fatal\
+            \ issue: ...\",\n    \"language\": \"Pass / Fail (explanation)\",\n   \
+            \ \"workflow\": \"Pass / Fatal issue: ...\",\n    \"typos\": \"Pass /\
+            \ Fail (X typos found)\"\n  },\n  \"utterance_analysis\": [\n    {\n     \
+            \ \"role\": \"Agent\",\n      \"time\": \"timestamp\",\n      \"text\"\
+            : \"exact sentence spoken by agent\",\n      \"analysis\": \"Does it reflect\
+            \ proper tone, language, clarity, politeness, or any issues?\"\n    },\n\
+                {\n      \"role\": \"Customer\",\n      \"time\": \"timestamp\",\n\
+                  \"text\": \"exact sentence spoken by customer\",\n      \"analysis\"\
+            : \"Optional; summarize customer emotion or feedback if relevant\"\n   \
+            \ }\n  ]\n}\n \n备注补充说明：\n \n若客服存在服务态度问题，如辱骂客户、推诿、质问、嘲讽等，直接判为不通过；\n \n\
+            若单个在线工单中出现1项致命项，整通对话记为不通过；\n \n若出现3项及以上非致命项不通过，整通对话亦记为不通过。\n \n \n "
+        - id: 049b5685-796b-40f6-a4a4-a987b5ec56e3
+          role: user
+          text: '请你对以下客服对话内容进行评分分析，并根据给定评分标准，返回结构化 JSON 结果：
+
+
+
+            {{#1753664561933.dialog#}}'
+        selected: true
+        structured_output_enabled: false
+        title: LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 125
+      id: '1753667739521'
+      position:
+        x: 633.6835648900765
+        y: 38.257093495448146
+      positionAbsolute:
+        x: 633.6835648900765
+        y: 38.257093495448146
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1753866047962'
+          - files
+          variable: files
+        selected: false
+        title: 结束 2
+        type: end
+      height: 89
+      id: '1753668973280'
+      position:
+        x: 1947.3894912431547
+        y: 38.257093495448146
+      positionAbsolute:
+        x: 1947.3894912431547
+        y: 38.257093495448146
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 85891c0f-96a7-42ad-9f92-8b05c6797f8b
+            value: ''
+            varType: string
+            variable_selector:
+            - '1753664561933'
+            - dialog
+          id: 'true'
+          logical_operator: and
+        - case_id: 93d9a111-5244-452f-8d13-1dc5f9df7801
+          conditions:
+          - comparison_operator: exists
+            id: b6599220-91f5-4af7-8efc-39783a795081
+            value: ''
+            varType: file
+            variable_selector:
+            - '1753664561933'
+            - muti_dialog
+          id: 93d9a111-5244-452f-8d13-1dc5f9df7801
+          logical_operator: and
+        - case_id: 5b354f9e-e365-408e-8cbc-236032889606
+          conditions:
+          - comparison_operator: not empty
+            id: 6e496419-b665-47d6-9a6e-430e9c804bf0
+            value: ''
+            varType: string
+            variable_selector:
+            - '1753664561933'
+            - dialog
+          - comparison_operator: exists
+            id: 117d4977-1391-4820-b41a-81319cb8d78b
+            value: ''
+            varType: file
+            variable_selector:
+            - '1753664561933'
+            - muti_dialog
+          id: 5b354f9e-e365-408e-8cbc-236032889606
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: 条件分支
+        type: if-else
+      height: 247
+      id: '1753671059911'
+      position:
+        x: 171.48569562515712
+        y: 272.5910592442603
+      positionAbsolute:
+        x: 171.48569562515712
+        y: 272.5910592442603
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        default_value:
+        - key: text
+          type: string
+          value: ''
+        desc: ''
+        error_strategy: default-value
+        model:
+          completion_params: {}
+          mode: chat
+          name: qwen-max
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: d23447c3-9321-4316-8ff1-fe3ecb6a9ab7
+          role: system
+          text: "你是一个客服对话质检AI，任务是根据以下详细质检标准对客服与客户的对话记录进行逐项评估，判断客服是否符合要求。请严格对照以下所有质检规则完成评估：\n\
+             \n## 响应时间 - 回应客户时间\n- 标准：帮客户查询相关信息后，再次回应客户时间不得超过2分钟\n- 严重程度：非致命项\n \n\
+            ## 响应时间 - 首次响应时间\n- 标准：首次响应时间不得超过40秒\n- 严重程度：非致命项\n \n## 服务态度 - 0容忍\n\
+            - 包括但不限于以下行为，均属服务态度致命项：\n  - 辱骂、推诿、质问、争执客户；\n  - 非礼貌或恶意主动关闭会话；\n  - 隐瞒投诉；\n\
+              - 引导客户升级投诉；\n  - 告知“没有领导”；\n  - 承诺操作未履行；\n  - 催促客户断线。\n \n## 服务技巧\n\
+            - 在线梳理：多次进线未主动查历史记录/工单，致命项；\n- 引导控制：不理解客户问题时未引导，致命项；\n- 确认信息：用户信息无误却锁定错误账户/订单，致命项；\n\
+            - 表达能力：表达混乱或对用户负面情绪未安抚，致命项。\n \n## 标准用语\n- 开头语：应使用“您好，请问有什么可以帮您？”（非致命项）；\n\
+            - 礼貌用语：\n  - 使用敬语如“您”“请”，不能使用口语化字词（非致命项）；\n  - 用户致谢应回应，如“不客气”等；\n  - 如答复错误需致歉；\n\
+              - 不得否定客户表达（非致命项）。\n \n## 流程执行与解决方案\n- 在线结束准确：\n  - 未做到“到我为止”、用户未结束主动关闭、已处理完未关闭，均为致命项；\n\
+            - 流程执行准确：\n  - 未按流程、错误方案，均为致命项。\n \n## 错别字\n- 同一会话中出现3次以上错别字，为非致命项。\n\
+             \n## 加分项\n- 用户对解决方案不认可时主动进一步协助；\n- 提供解决方案时解释原因；\n- 主动给出超出流程预期的帮助或提示。\n\
+             \n请根据以上每条标准评估对话记录，逐项输出评分细节，列出加分项与致命项，并最终判断是否通过本次质检。并只返回如下结构的合法JSON结果\n\
+             \n{\n\"dialog_id\": XX,\n\"staff_id\":XX,  \n\"passed\": \"PASS / FAIL\"\
+            ,\n  \"fatal_issues\": [\"Issue 1\", \"Issue 2\"],\n  \"non_fatal_issues\"\
+            : [\"Issue 1\", \"Issue 2\", \"Issue 3\"],\n  \"bonus_points\": [\"Bonus\
+            \ 1\", \"Bonus 2\"],\n  \"score_details\": {\n    \"response_time_first\"\
+            : \"Pass / Fail (explanation)\",\n    \"response_time_followup\": \"Pass\
+            \ / Fail (explanation)\",\n    \"attitude\": \"Pass / Fatal issue: ...\"\
+            ,\n    \"service_techniques\": \"Pass / Fatal issue: ...\",\n    \"language\"\
+            : \"Pass / Fail (explanation)\",\n    \"workflow\": \"Pass / Fatal issue:\
+            \ ...\",\n    \"typos\": \"Pass / Fail (X typos found)\"\n  },\n  \"utterance_analysis\"\
+            : [\n    {\n      \"role\": \"Agent\",\n      \"time\": \"timestamp\"\
+            ,\n      \"text\": \"exact sentence spoken by agent\",\n      \"analysis\"\
+            : \"Does it reflect proper tone, language, clarity, politeness, or any\
+            \ issues?\"\n    },\n    {\n      \"role\": \"Customer\",\n      \"time\"\
+            : \"timestamp\",\n      \"text\": \"exact sentence spoken by customer\"\
+            ,\n      \"analysis\": \"Optional; summarize customer emotion or feedback\
+            \ if relevant\"\n    }\n  ]\n}\n \n备注补充说明：\n \n若客服存在服务态度问题，如辱骂客户、推诿、质问、嘲讽等，直接判为不通过；\n\
+             \n若单个在线工单中出现1项致命项，整通对话记为不通过；\n \n若出现3项及以上非致命项不通过，整通对话亦记为不通过。\n "
+        - id: 049b5685-796b-40f6-a4a4-a987b5ec56e3
+          role: user
+          text: '请你对以下客服对话内容进行评分分析，并根据给定评分标准，只返回一个结构化 JSON 数组结果：
+
+
+            {{#1753671613237.text#}}'
+        retry_config:
+          max_retries: 1
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output_enabled: false
+        title: LLM (1)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 155
+      id: '17536713257860'
+      position:
+        x: 1002.1193669563587
+        y: 266.7171018028128
+      positionAbsolute:
+        x: 1002.1193669563587
+        y: 266.7171018028128
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        is_array_file: false
+        selected: false
+        title: 文档提取器
+        type: document-extractor
+        variable_selector:
+        - '1753664561933'
+        - muti_dialog
+      height: 91
+      id: '1753671613237'
+      position:
+        x: 633.6835648900765
+        y: 266.7171018028128
+      positionAbsolute:
+        x: 633.6835648900765
+        y: 266.7171018028128
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1753863016281'
+          - files
+          variable: files
+        selected: false
+        title: 结束 2
+        type: end
+      height: 89
+      id: '1753671782560'
+      position:
+        x: 3003.0502643647637
+        y: 122.89073952856779
+      positionAbsolute:
+        x: 3003.0502643647637
+        y: 122.89073952856779
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    return {\n        \"result\": \"error: 未提供对话\"\
+          ,\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行
+        type: code
+        variables: []
+      height: 53
+      id: '1753672821096'
+      position:
+        x: 633.6835648900765
+        y: 644.378099574881
+      positionAbsolute:
+        x: 633.6835648900765
+        y: 644.378099574881
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    return {\n        \"result\": \"error: 提供了多重对话\"\
+          ,\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 (1)
+        type: code
+        variables: []
+      height: 53
+      id: '17536729420910'
+      position:
+        x: 633.6835648900765
+        y: 472.94650302269713
+      positionAbsolute:
+        x: 633.6835648900765
+        y: 472.94650302269713
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '17536729420910'
+          - result
+          variable: result
+        selected: false
+        title: 结束 3
+        type: end
+      height: 89
+      id: '1753751309447'
+      position:
+        x: 1002.1193669563587
+        y: 472.94650302269713
+      positionAbsolute:
+        x: 1002.1193669563587
+        y: 472.94650302269713
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1753672821096'
+          - result
+          variable: result
+        selected: false
+        title: 结束 4
+        type: end
+      height: 89
+      id: '1753751337547'
+      position:
+        x: 1002.1193669563587
+        y: 644.378099574881
+      positionAbsolute:
+        x: 1002.1193669563587
+        y: 644.378099574881
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The JSON string to convert.
+            ja_JP: The JSON string to convert.
+            pt_BR: The JSON string to convert.
+            zh_Hans: 要转换的JSON字符串。
+          label:
+            en_US: JSON String
+            ja_JP: JSON String
+            pt_BR: JSON String
+            zh_Hans: JSON字符串
+          llm_description: The JSON string to convert.
+          max: null
+          min: null
+          name: json_str
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The filename for the generated Excel file
+            ja_JP: The filename for the generated Excel file
+            pt_BR: The filename for the generated Excel file
+            zh_Hans: 生成的Excel文件的文件名
+          label:
+            en_US: Excel filename
+            ja_JP: Excel filename
+            pt_BR: Excel filename
+            zh_Hans: Excel文件名
+          llm_description: The filename that will be used for the generated Excel
+            file
+          max: null
+          min: null
+          name: filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          filename: ''
+          json_str: ''
+        provider_id: qiangxinglin/excel_tools/excel_tools
+        provider_name: qiangxinglin/excel_tools/excel_tools
+        provider_type: builtin
+        selected: false
+        title: Json转Excel
+        tool_configurations: {}
+        tool_description: 将Json转换为Excel。
+        tool_label: Json转Excel
+        tool_name: json2excel
+        tool_parameters:
+          filename:
+            type: mixed
+            value: '{{#1753664561933.name_file#}}'
+          json_str:
+            type: mixed
+            value: '{{#17538683315150.result#}}'
+        type: tool
+      height: 53
+      id: '1753863016281'
+      position:
+        x: 2474.2312216611963
+        y: 122.89073952856779
+      positionAbsolute:
+        x: 2474.2312216611963
+        y: 122.89073952856779
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "import json\nimport re\n\ndef main(arg1: str) -> dict:\n    # 去除 ```json\
+          \ ``` 包裹\n    cleaned_str = re.sub(r\"^```json\\s*|\\s*```$\", \"\", arg1.strip())\n\
+          \n    if not cleaned_str:\n        return {\"error\": \"输入为空或格式非法\"}\n\n\
+          \    try:\n        obj = json.loads(cleaned_str)\n    except json.JSONDecodeError\
+          \ as e:\n        return {\"error\": f\"JSON解析失败: {e}\"}\n\n    # 转为字符串的字段\n\
+          \    for key in [\"utterance_analysis\", \"score_details\", \"fatal_issues\"\
+          , \"non_fatal_issues\", \"bonus_points\"]:\n        obj[key] = str(obj.get(key,\
+          \ \"\"))\n\n\n    return {\n        \"result\": json.dumps([obj], ensure_ascii=False)\n\
+          \    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 3
+        type: code
+        variables:
+        - value_selector:
+          - '1753667739521'
+          - text
+          variable: arg1
+      height: 53
+      id: '1753865449688'
+      position:
+        x: 1002.1193669563587
+        y: 38.257093495448146
+      positionAbsolute:
+        x: 1002.1193669563587
+        y: 38.257093495448146
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The JSON string to convert.
+            ja_JP: The JSON string to convert.
+            pt_BR: The JSON string to convert.
+            zh_Hans: 要转换的JSON字符串。
+          label:
+            en_US: JSON String
+            ja_JP: JSON String
+            pt_BR: JSON String
+            zh_Hans: JSON字符串
+          llm_description: The JSON string to convert.
+          max: null
+          min: null
+          name: json_str
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The filename for the generated Excel file
+            ja_JP: The filename for the generated Excel file
+            pt_BR: The filename for the generated Excel file
+            zh_Hans: 生成的Excel文件的文件名
+          label:
+            en_US: Excel filename
+            ja_JP: Excel filename
+            pt_BR: Excel filename
+            zh_Hans: Excel文件名
+          llm_description: The filename that will be used for the generated Excel
+            file
+          max: null
+          min: null
+          name: filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          filename: ''
+          json_str: ''
+        provider_id: qiangxinglin/excel_tools/excel_tools
+        provider_name: qiangxinglin/excel_tools/excel_tools
+        provider_type: builtin
+        selected: false
+        title: Json转Excel
+        tool_configurations: {}
+        tool_description: 将Json转换为Excel。
+        tool_label: Json转Excel
+        tool_name: json2excel
+        tool_parameters:
+          filename:
+            type: mixed
+            value: '{{#1753664561933.name_file#}}'
+          json_str:
+            type: mixed
+            value: '{{#1753865449688.result#}}'
+        type: tool
+      height: 53
+      id: '1753866047962'
+      position:
+        x: 1447.1037616005917
+        y: 38.257093495448146
+      positionAbsolute:
+        x: 1447.1037616005917
+        y: 38.257093495448146
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "import json\nimport re\n\ndef main(arg1: str) -> dict:\n    # 去除 markdown\
+          \ ```json 和 ``` 包裹\n    cleaned_str = re.sub(r\"^```json\\s*|\\s*```$\"\
+          , \"\", arg1.strip())\n\n    if not cleaned_str:\n        return {\"result\"\
+          : \"输入为空或格式非法\"}\n\n    try:\n        obj_list = json.loads(cleaned_str)\n\
+          \    except json.JSONDecodeError as e:\n        return {\"result\": f\"\
+          JSON解析失败: {e}\"}\n\n    if not isinstance(obj_list, list):\n        return\
+          \ {\"result\": \"输入的 JSON 应该是一个列表 [obj1, obj2, ...]\"}\n\n    # 对每个 dict\
+          \ 处理指定字段\n    for obj in obj_list:\n        for key in [\"utterance_analysis\"\
+          , \"score_details\", \"fatal_issues\", \"non_fatal_issues\", \"bonus_points\"\
+          ]:\n            obj[key] = str(obj.get(key, \"\"))\n\n    # 返回字符串化后的 JSON\
+          \ 列表\n    return {\n        \"result\": json.dumps(obj_list, ensure_ascii=False)\n\
+          \    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 3 (1)
+        type: code
+        variables:
+        - value_selector:
+          - '17536713257860'
+          - text
+          variable: arg1
+      height: 53
+      id: '17538683315150'
+      position:
+        x: 1447.1037616005917
+        y: 266.7171018028128
+      positionAbsolute:
+        x: 1447.1037616005917
+        y: 266.7171018028128
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is not
+            id: f8061e87-fcc2-44b3-880a-1a6b442a1ae4
+            value: JSON
+            varType: string
+            variable_selector:
+            - '1753664561933'
+            - output_type
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: 条件分支 3
+        type: if-else
+      height: 125
+      id: '1754363868447'
+      position:
+        x: 1947.3894912431547
+        y: 266.7171018028128
+      positionAbsolute:
+        x: 1947.3894912431547
+        y: 266.7171018028128
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '17538683315150'
+          - result
+          variable: result
+        selected: false
+        title: 结束 6
+        type: end
+      height: 89
+      id: '1754364010702'
+      position:
+        x: 2474.2312216611963
+        y: 349.4808734470956
+      positionAbsolute:
+        x: 2474.2312216611963
+        y: 349.4808734470956
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The audio file to be converted.
+            ja_JP: The audio file to be converted.
+            pt_BR: The audio file to be converted.
+            zh_Hans: 要转换的音频文件。
+          label:
+            en_US: Audio File
+            ja_JP: Audio File
+            pt_BR: Audio File
+            zh_Hans: 音频文件
+          llm_description: The audio file to be converted.
+          max: null
+          min: null
+          name: audio_file
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: file
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: All available ASR models. You can config model in the Model Provider
+              of Settings.
+            ja_JP: All available ASR models. You can config model in the Model Provider
+              of Settings.
+            pt_BR: All available ASR models. You can config model in the Model Provider
+              of Settings.
+            zh_Hans: 所有可用的 ASR 模型。你可以在设置中的模型供应商里配置。
+          label:
+            en_US: Model
+            ja_JP: Model
+            pt_BR: Model
+            zh_Hans: Model
+          llm_description: null
+          max: null
+          min: null
+          name: model
+          options:
+          - label:
+              en_US: paraformer-realtime-v1(langgenius/tongyi/tongyi)
+              ja_JP: paraformer-realtime-v1(langgenius/tongyi/tongyi)
+              pt_BR: paraformer-realtime-v1(langgenius/tongyi/tongyi)
+              zh_Hans: paraformer-realtime-v1(langgenius/tongyi/tongyi)
+            value: langgenius/tongyi/tongyi#paraformer-realtime-v1
+          - label:
+              en_US: paraformer-realtime-v2(langgenius/tongyi/tongyi)
+              ja_JP: paraformer-realtime-v2(langgenius/tongyi/tongyi)
+              pt_BR: paraformer-realtime-v2(langgenius/tongyi/tongyi)
+              zh_Hans: paraformer-realtime-v2(langgenius/tongyi/tongyi)
+            value: langgenius/tongyi/tongyi#paraformer-realtime-v2
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: select
+        params:
+          audio_file: ''
+          model: ''
+        provider_id: audio
+        provider_name: audio
+        provider_type: builtin
+        selected: false
+        title: Speech To Text
+        tool_configurations:
+          model: langgenius/tongyi/tongyi#paraformer-realtime-v2
+        tool_description: 将音频文件转换为文本。
+        tool_label: Speech To Text
+        tool_name: asr
+        tool_parameters:
+          audio_file:
+            type: variable
+            value:
+            - '1753664561933'
+            - audio_input
+        type: tool
+      height: 89
+      id: '1754379634688'
+      position:
+        x: 171.48569562515712
+        y: 1018.6734772157386
+      positionAbsolute:
+        x: 171.48569562515712
+        y: 1018.6734772157386
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not exists
+            id: ed9df8c8-86b1-4c0f-a830-a96c617fadcd
+            value: ''
+            varType: file
+            variable_selector:
+            - '1753664561933'
+            - audio_input
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: 条件分支 3
+        type: if-else
+      height: 125
+      id: '1754379920020'
+      position:
+        x: -329.51430437484254
+        y: 272.5910592442603
+      positionAbsolute:
+        x: -329.51430437484254
+        y: 272.5910592442603
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        default_value:
+        - key: text
+          type: string
+          value: ''
+        desc: ''
+        error_strategy: default-value
+        model:
+          completion_params: {}
+          mode: chat
+          name: qwen-max
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: d23447c3-9321-4316-8ff1-fe3ecb6a9ab7
+          role: system
+          text: "你是一个客服对话质检AI，任务是根据以下详细质检标准对客服与客户的对话记录进行逐项评估，判断客服是否符合要求。请严格对照以下所有质检规则完成评估：\n\
+             \n## 响应时间 - 回应客户时间\n- 标准：帮客户查询相关信息后，再次回应客户时间不得超过2分钟\n- 严重程度：非致命项\n \n\
+            ## 响应时间 - 首次响应时间\n- 标准：首次响应时间不得超过40秒\n- 严重程度：非致命项\n \n## 服务态度 - 0容忍\n\
+            - 包括但不限于以下行为，均属服务态度致命项：\n  - 辱骂、推诿、质问、争执客户；\n  - 非礼貌或恶意主动关闭会话；\n  - 隐瞒投诉；\n\
+              - 引导客户升级投诉；\n  - 告知“没有领导”；\n  - 承诺操作未履行；\n  - 催促客户断线。\n \n## 服务技巧\n\
+            - 在线梳理：多次进线未主动查历史记录/工单，致命项；\n- 引导控制：不理解客户问题时未引导，致命项；\n- 确认信息：用户信息无误却锁定错误账户/订单，致命项；\n\
+            - 表达能力：表达混乱或对用户负面情绪未安抚，致命项。\n \n## 标准用语\n- 开头语：应使用“您好，请问有什么可以帮您？”（非致命项）；\n\
+            - 礼貌用语：\n  - 使用敬语如“您”“请”，不能使用口语化字词（非致命项）；\n  - 用户致谢应回应，如“不客气”等；\n  - 如答复错误需致歉；\n\
+              - 不得否定客户表达（非致命项）。\n \n## 流程执行与解决方案\n- 在线结束准确：\n  - 未做到“到我为止”、用户未结束主动关闭、已处理完未关闭，均为致命项；\n\
+            - 流程执行准确：\n  - 未按流程、错误方案，均为致命项。\n \n## 错别字\n- 同一会话中出现3次以上错别字，为非致命项。\n\
+             \n## 加分项\n- 用户对解决方案不认可时主动进一步协助；\n- 提供解决方案时解释原因；\n- 主动给出超出流程预期的帮助或提示。\n\
+             \n请根据以上每条标准评估对话记录，逐项输出评分细节，列出加分项与致命项，并最终判断是否通过本次质检。并只返回如下结构的合法JSON结果\n\
+             \n{\n\"dialog_id\": {{#1753664561933.dialog_id#}},\n\"staff_id\":{{#1753664561933.staff_id#}}, \
+            \ \n\"passed\": \"PASS / FAIL\",\n  \"fatal_issues\": [\"Issue 1\", \"\
+            Issue 2\"],\n  \"non_fatal_issues\": [\"Issue 1\", \"Issue 2\", \"Issue\
+            \ 3\"],\n  \"bonus_points\": [\"Bonus 1\", \"Bonus 2\"],\n  \"score_details\"\
+            : {\n    \"response_time_first\": \"Pass / Fail (explanation)\",\n   \
+            \ \"response_time_followup\": \"Pass / Fail (explanation)\",\n    \"attitude\"\
+            : \"Pass / Fatal issue: ...\",\n    \"service_techniques\": \"Pass / Fatal\
+            \ issue: ...\",\n    \"language\": \"Pass / Fail (explanation)\",\n   \
+            \ \"workflow\": \"Pass / Fatal issue: ...\",\n    \"typos\": \"Pass /\
+            \ Fail (X typos found)\"\n  },\n  \"utterance_analysis\": [\n    {\n     \
+            \ \"role\": \"Agent\",\n      \"time\": \"timestamp\",\n      \"text\"\
+            : \"exact sentence spoken by agent\",\n      \"analysis\": \"Does it reflect\
+            \ proper tone, language, clarity, politeness, or any issues?\"\n    },\n\
+                {\n      \"role\": \"Customer\",\n      \"time\": \"timestamp\",\n\
+                  \"text\": \"exact sentence spoken by customer\",\n      \"analysis\"\
+            : \"Optional; summarize customer emotion or feedback if relevant\"\n   \
+            \ }\n  ]\n}\n \n备注补充说明：\n \n若客服存在服务态度问题，如辱骂客户、推诿、质问、嘲讽等，直接判为不通过；\n \n\
+            若单个在线工单中出现1项致命项，整通对话记为不通过；\n \n若出现3项及以上非致命项不通过，整通对话亦记为不通过。\n \n \n "
+        - id: 049b5685-796b-40f6-a4a4-a987b5ec56e3
+          role: user
+          text: '请你对以下客服对话内容进行评分分析，并根据给定评分标准，返回结构化 JSON 结果：
+
+
+            {{#1754379634688.text#}}'
+        selected: false
+        structured_output_enabled: false
+        title: LLM (1)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 125
+      id: '17543802375720'
+      position:
+        x: 596.9406134610323
+        y: 1018.6734772157386
+      positionAbsolute:
+        x: 596.9406134610323
+        y: 1018.6734772157386
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '17543878613160'
+          - result
+          variable: result
+        selected: false
+        title: 结束 6
+        type: end
+      height: 89
+      id: '1754380316477'
+      position:
+        x: 1435.165439723996
+        y: 1018.6734772157386
+      positionAbsolute:
+        x: 1435.165439723996
+        y: 1018.6734772157386
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "import json\nimport re\n\ndef main(arg1: str) -> dict:\n    # 去除 markdown\
+          \ ```json 和 ``` 包裹\n    cleaned_str = re.sub(r\"^```json\\s*|\\s*```$\"\
+          , \"\", arg1.strip())\n\n    if not cleaned_str:\n        return {\"result\"\
+          : \"输入为空或格式非法\"}\n\n    try:\n        obj = json.loads(cleaned_str)\n  \
+          \  except json.JSONDecodeError as e:\n        return {\"result\": f\"JSON解析失败:\
+          \ {e}\"}\n\n    if not isinstance(obj, dict):\n        return {\"result\"\
+          : \"输入的 JSON 应该是一个对象（dict），如 { ... }\"}\n\n    # 对指定字段进行字符串化\n    for key\
+          \ in [\"utterance_analysis\", \"score_details\", \"fatal_issues\", \"non_fatal_issues\"\
+          , \"bonus_points\"]:\n        obj[key] = str(obj.get(key, \"\"))\n\n   \
+          \ # 返回字符串化后的 JSON 对象（包装在 list 中）\n    return {\n        \"result\": json.dumps([obj],\
+          \ ensure_ascii=False)\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 3 (2)
+        type: code
+        variables:
+        - value_selector:
+          - '17543802375720'
+          - text
+          variable: arg1
+      height: 53
+      id: '17543878613160'
+      position:
+        x: 1031.7994747931452
+        y: 1018.6734772157386
+      positionAbsolute:
+        x: 1031.7994747931452
+        y: 1018.6734772157386
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    viewport:
+      x: -211.87493493678062
+      y: 343.80611719392004
+      zoom: 0.7287832152225494

@@ -1,0 +1,14 @@
+  {
+  "upload_file_type": "TXT",
+  "dialog":"{\n  \"dialog_id\": \"DIALOG001\",\n  \"staff_id\":\"XX\",\n  \"dialog\": [\n    {\n      \"role\": \"客户\",\n      \"time\": \"10:00:01\",\n      \"content\": \"你好，我这个月账单多了50元，怎么回事？\"\n    },\n    {\n      \"role\": \"客服\",\n      \"time\": \"10:00:30\",\n      \"content\": \"您好，请稍等，我为您查询一下相关记录。\"\n    },\n    {\n      \"role\": \"客服\",\n      \"time\": \"10:01:10\",\n      \"content\": \"系统显示您于6月28日开通了某会员服务，费用为50元。\"\n    }\n  ]\n}",
+  "audio_path": "",
+  "save_file_name": "abd",
+  "user": "admin",
+  "email_info": {
+    "sender_email": "xx@sample.com",
+    "sender_password": "******"
+  },
+  "receiver": "xx@sample.com",
+  "dialog_id": "0000001",
+  "staff_id": "0000001"
+  }
