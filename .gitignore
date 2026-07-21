@@ -1,2 +1,4 @@
 质检v3.yml
 config_agent_check.json
+.idea/
+__pycache__/
